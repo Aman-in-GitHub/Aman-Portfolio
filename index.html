@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="/main.js"></script>
+    <title>Aman</title>
+  </head>
+  <body class="font-primary select-none bg-[#1e90ff] dark:bg-[#232323]">
+    <header class="fixed top-0 bg- w-full z-50 backdrop-blur-[4px]">
+      <nav
+        class="font-secondary flex justify-between items-center relative px-5 shadow-md dark:shadow-[#333333] py-2 md:px-16 lg:px-40"
+      >
+        <div class="logo w-12">
+          <a href="">
+            <img src="/logo.png" alt="" />
+          </a>
+        </div>
+        <div>
+          <ul
+            class="flex flex-col gap-20 fixed top-[0%] h-screen justify-center right-0 w-full items-center text-4xl font-black menu select-none translate-x-[200%] duration-500 lg:flex-row lg:translate-x-0 lg:h-auto lg:static lg:text-2xl lg:bg-transparent lg:gap-12 dark:bg-[#3d3d3d] text-white lg:dark:bg-transparent bg-[#4ca5ff]"
+          >
+            <a href="#projects" class="hover:scale-105 duration-500"
+              >Projects</a
+            >
+            <a href="#aboutMe" class="hover:scale-105 duration-500">About Me</a>
+            <a href="#contact" class="hover:scale-105 duration-500">Contact</a>
+            <div class="toggle cursor-pointer hidden lg:block">
+              <div class="light hidden" title="Light Mode">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="white"
+                  class="bi bi-brightness-high-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                  />
+                </svg>
+              </div>
+
+              <div class="dark hidden" title="Dark Mode">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="white"
+                  class="bi bi-moon-stars-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                  />
+                  <path
+                    d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-center gap-16 lg:hidden">
+              <a
+                href="https://github.com/Aman-in-GitHub"
+                class="duration-300 hover:scale-105"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  fill="white"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/amanchandinc"
+                class="duration-300 hover:scale-105"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  fill="white"
+                  class="bi bi-linkedin"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                  />
+                </svg>
+              </a>
+
+              <span
+                class="cursor-pointer closeMenu absolute top-3 right-4 md:right-[3.7rem] lg:hidden"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  fill="white"
+                  class="bi bi-x"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </span>
+            </div>
+          </ul>
+        </div>
+        <div class="flex items-center gap-4 md:gap-8 lg:hidden">
+          <div class="toggle cursor-pointer">
+            <div class="light hidden" title="Light Mode">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="white"
+                class="bi bi-brightness-high-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                />
+              </svg>
+            </div>
+
+            <div class="dark hidden" title="Dark Mode">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="white"
+                class="bi bi-moon-stars-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                />
+                <path
+                  d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="lg:hidden">
+            <div class="cursor-pointer openMenu">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="white"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="text-[#FBEAEB] bg-[#1e90ff] dark:bg-[#232323] px-5 md:px-16 lg:px-40"
+        id="home"
+      >
+        <div
+          class="flex justify-center items-center h-full flex-col md:flex-row mt-20 md:mt-0"
+        >
+          <div class="w-[15rem] md:w-[40rem] md:order-2 mb-8 md:mb-0">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              data-name="Layer 1"
+              viewBox="0 0 675.68 597"
+              id="working-with-laptop"
+            >
+              <defs>
+                <linearGradient
+                  id="a"
+                  x1="316.23"
+                  x2="303.73"
+                  y1="161.79"
+                  y2="163.86"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#ecc4d7"></stop>
+                  <stop offset=".16" stop-color="#edcbd5"></stop>
+                  <stop offset=".42" stop-color="#efd4d1"></stop>
+                  <stop offset=".7" stop-color="#f2eac9"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="c"
+                  x1="5489.66"
+                  x2="5477.15"
+                  y1="161.79"
+                  y2="163.86"
+                  gradientTransform="matrix(-1 0 0 1 5955.09 0)"
+                  xlink:href="#a"
+                ></linearGradient>
+                <linearGradient
+                  id="b"
+                  x1="340.05"
+                  x2="342.05"
+                  y1="534.48"
+                  y2="743.6"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset=".01" stop-opacity="0"></stop>
+                  <stop
+                    offset=".26"
+                    stop-color="#0d0d12"
+                    stop-opacity=".21"
+                  ></stop>
+                  <stop
+                    offset=".77"
+                    stop-color="#2f2e40"
+                    stop-opacity=".75"
+                  ></stop>
+                  <stop offset=".99" stop-color="#3f3d56"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="d"
+                  x1="377.47"
+                  x2="392.87"
+                  y1="312.77"
+                  y2="-23.57"
+                  xlink:href="#b"
+                ></linearGradient>
+                <linearGradient
+                  id="e"
+                  x1="199.41"
+                  x2="563.94"
+                  y1="499.55"
+                  y2="499.55"
+                  xlink:href="#b"
+                ></linearGradient>
+                <linearGradient
+                  id="f"
+                  x1="387.17"
+                  x2="390.91"
+                  y1="581.54"
+                  y2="513.37"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#68e1fd"></stop>
+                  <stop offset="1" stop-color="#69b9eb"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="g"
+                  x1="381.57"
+                  x2="382.14"
+                  y1="528.68"
+                  y2="395.54"
+                  xlink:href="#b"
+                ></linearGradient>
+                <linearGradient
+                  id="h"
+                  x1="498.79"
+                  x2="75.38"
+                  y1="483.91"
+                  y2="637.05"
+                  xlink:href="#b"
+                ></linearGradient>
+                <linearGradient
+                  id="i"
+                  x1="384.14"
+                  x2="395.38"
+                  y1="240.43"
+                  y2="548.08"
+                  xlink:href="#b"
+                ></linearGradient>
+                <linearGradient
+                  id="j"
+                  x1="163.66"
+                  x2="188.03"
+                  y1="615.27"
+                  y2="208.03"
+                  xlink:href="#a"
+                ></linearGradient>
+                <linearGradient
+                  id="k"
+                  x1="590.73"
+                  x2="617.87"
+                  y1="713.7"
+                  y2="260.18"
+                  xlink:href="#a"
+                ></linearGradient>
+                <linearGradient
+                  id="l"
+                  x1="385.46"
+                  x2="398.21"
+                  y1="318.79"
+                  y2="105.65"
+                  xlink:href="#a"
+                ></linearGradient>
+                <linearGradient
+                  id="m"
+                  x1="391.3"
+                  x2="387.82"
+                  y1="5.43"
+                  y2="348.28"
+                  xlink:href="#a"
+                ></linearGradient>
+                <linearGradient
+                  id="n"
+                  x1="409.14"
+                  x2="311.43"
+                  y1="342.81"
+                  y2="1053.08"
+                  xlink:href="#b"
+                ></linearGradient>
+              </defs>
+              <path
+                fill="#68e1fd"
+                d="M376.76 59.35C339.63 81.2 297.63 93 256.27 105.12s-83.2 24.88-119.33 48.35-66.41 59.3-73.45 101.81c-2.59 15.68-2 31.91-6.5 47.16-8.75 29.71-35.08 50.93-48 79.05-17.97 38.9-7.3 86.42 17.3 121.51 32.25 45.94 85.51 73.91 140.39 85.72s111.78 9 167.68 3.88c62.47-5.8 125.63-14.7 183.25-39.6s109.8-67.61 134.31-125.38c16.11-38 27.17-80.59 20.38-121.27-52.84-316.67-272-260.84-295.54-247Z"
+                opacity=".18"
+              ></path>
+              <path
+                fill="url(#a)"
+                d="M309.84 147.37a6.42 6.42 0 0 0-5.1 2.13 7.86 7.86 0 0 0-1.44 3.67 22.72 22.72 0 0 0 8.12 21.34c2.07 1.63 4.66 2.93 7.26 2.48a1.36 1.36 0 0 0 .8-.35 1.54 1.54 0 0 0 .29-1.06c.21-7 .38-14.16-2.31-20.58-1.88-4.47-2.02-7.56-7.62-7.63Z"
+                transform="translate(-57.17)"
+              ></path>
+              <path
+                fill="url(#c)"
+                d="M471.82 147.37a6.44 6.44 0 0 1 5.11 2.13 8 8 0 0 1 1.43 3.67 22.71 22.71 0 0 1-8.11 21.34c-2.07 1.63-4.67 2.93-7.27 2.48a1.39 1.39 0 0 1-.8-.35 1.59 1.59 0 0 1-.29-1.06c-.21-7-.37-14.16 2.32-20.58 1.87-4.47 2.01-7.56 7.61-7.63Z"
+                transform="translate(-57.17)"
+              ></path>
+              <rect
+                width="658.72"
+                height="103.55"
+                x="10.79"
+                y="493.17"
+                fill="#68e1fd"
+                rx="32.74"
+              ></rect>
+              <rect
+                width="658.72"
+                height="103.55"
+                x="10.79"
+                y="493.17"
+                fill="url(#b)"
+                rx="32.74"
+                style="isolation: isolate"
+              ></rect>
+              <path
+                fill="#68e1fd"
+                d="M264.01 214.77s-77-4.51-110.66 36.59-16.11 234.83-16.11 234.83l355.72 8.1 14.48-219.18c1.43-46.23-54.05-60.55-112.56-60.36h-3.06c-102.99 1.05-127.81.02-127.81.02Z"
+              ></path>
+              <path
+                fill="url(#d)"
+                d="M321.18 214.77s-77-4.51-110.66 36.59-16.11 234.83-16.11 234.83l355.72 8.1 14.48-219.18c1.43-46.23-54.05-60.55-112.56-60.36h-3.06c-102.99 1.05-127.81.02-127.81.02Z"
+                transform="translate(-57.17)"
+                style="isolation: isolate"
+              ></path>
+              <path
+                fill="#68e1fd"
+                d="M202.21 223.93s-63.36 0-123.9 157.77l77.66 35.24 39.16-48.78ZM461.31 223.93s63.36 0 123.9 157.77l-77.66 35.24-39.16-48.78Z"
+              ></path>
+              <path
+                fill="#fff"
+                d="M115.83 385.14a14 14 0 0 1-6.66-19c15.92-31.71 64.67-106 97.76-110.38 41.45-5.51 88.7-11.28 88.7-11.28s143.58-2.62 167.43 14c18.67 13 61 68.48 84.06 99.27 5.33 7.13 3.34 20.21-4.74 24l-57 46.21a14.13 14.13 0 0 0-4.85 3.72l-38.25 45.72a14 14 0 0 1-11.45 5l-200.87-9.91a14 14 0 0 1-12.51-9.25l-23.8-66.06a14 14 0 0 0-25.45-2.07 14 14 0 0 1-18.17 5.89Z"
+                opacity=".24"
+              ></path>
+              <rect
+                width="658.72"
+                height="103.55"
+                x="16.96"
+                y="473.44"
+                fill="#68e1fd"
+                rx="32.74"
+              ></rect>
+              <path
+                fill="#1d2741"
+                d="M66.47 510.83c2.49 1.56 5.43 1.63 8.24 1.68l51.88.74a50.53 50.53 0 0 0-9.71 6.87c-11.5 10.34-4.59 29.4 10.87 29.93 117.45 4 235 2.61 352.48 1.22 18.34-.22 36.75-.44 55-2.31a15 15 0 0 0 10.65-23.75 6.63 6.63 0 0 1 5.44-9c19.18-2.23 39-1.52 58-4.77 3.75-.64 8.13-1.82 9.65-6 1-2.59.43-5.6-.39-8.25-3.85-12.33-13.86-20.78-24.45-24.56s-21.85-3.58-32.9-3.36L126.97 478c-15 .3-39.15-5-53.22 1.41-8.81 4.03-19.8 23.59-7.28 31.42Z"
+                opacity=".18"
+              ></path>
+              <path
+                fill="url(#e)"
+                d="M216.13 527.12 200.58 484s-6.36-7.34 10.6-10.6 345.12 0 345.12 0l7.64 53.68Z"
+                transform="translate(-57.17)"
+                style="isolation: isolate"
+              ></path>
+              <path
+                fill="url(#f)"
+                d="M563.94 527.12v4.44a13.38 13.38 0 0 1-13.38 13.38h-321a13.38 13.38 0 0 1-13.38-13.38v-4.44a13.35 13.35 0 0 1 13.38-13.39h321a13.35 13.35 0 0 1 13.38 13.39Z"
+                transform="translate(-57.17)"
+              ></path>
+              <path
+                fill="#68e1fd"
+                d="M506.21 523.25a13.4 13.4 0 0 1-12.82 9.51h-321a13.4 13.4 0 0 1-12.82-9.51 13.4 13.4 0 0 1 12.82-9.52h321a13.4 13.4 0 0 1 12.82 9.52Z"
+              ></path>
+              <path
+                fill="url(#g)"
+                d="M216.13 527.12 200.58 484s-6.36-7.34 10.6-10.6 345.12 0 345.12 0l7.64 53.68Z"
+                transform="translate(-57.17)"
+                style="isolation: isolate"
+              ></path>
+              <path
+                fill="url(#h)"
+                d="M563.38 523.25a13.4 13.4 0 0 1-12.82 9.51h-321a13.4 13.4 0 0 1-12.82-9.51 13.4 13.4 0 0 1 12.82-9.52l326.79-5.42c6 0 5.36 9.43 7.03 14.94Z"
+                transform="translate(-57.17)"
+                style="isolation: isolate"
+              ></path>
+              <path
+                fill="#68e1fd"
+                d="M499.13 309.22v185.07a19.44 19.44 0 0 1-19.44 19.44H186.04a19.42 19.42 0 0 1-19.44-19.44V309.22a19.44 19.44 0 0 1 19.44-19.44h293.65a19.42 19.42 0 0 1 19.44 19.44Z"
+              ></path>
+              <path
+                fill="url(#i)"
+                d="M556.3 309.22v185.07a19.44 19.44 0 0 1-19.44 19.44H243.21a19.42 19.42 0 0 1-19.44-19.44V309.22a19.44 19.44 0 0 1 19.44-19.44h293.65a19.42 19.42 0 0 1 19.44 19.44Z"
+                transform="translate(-57.17)"
+                style="isolation: isolate"
+              ></path>
+              <path
+                fill="#68e1fd"
+                d="M499.13 309.22V494.3a19.38 19.38 0 0 1-8.42 16 .91.91 0 0 1-.16.11 19.16 19.16 0 0 1-9.81 3.29H186.03a19.33 19.33 0 0 1-8.25-1.85 19.23 19.23 0 0 1-1.85-8.26V318.55a19.44 19.44 0 0 1 19.44-19.44h293.65a19.3 19.3 0 0 1 8.26 1.84 19.24 19.24 0 0 1 1.85 8.27Z"
+              ></path>
+              <path
+                fill="url(#j)"
+                d="M150.56 388.54s-33.79 57.12-29.44 78.87 102.65 13.92 102.65 13.92v-52.21h-20.85l10.22-12.18Z"
+                transform="translate(-57.17)"
+              ></path>
+              <path
+                fill="url(#k)"
+                d="M627.3 388.54s29 64.08 29.85 77.13-5.78 18.4-32.47 21.82-68.38 0-68.38 0V423l14.51-.87-6.09-5.22Z"
+                transform="translate(-57.17)"
+              ></path>
+              <path
+                fill="url(#l)"
+                d="M352.76 233.84s-.94 22.09 17.72 36 40 .45 45.19-8.69 12.9-31.36 12.9-31.36Z"
+                transform="translate(-57.17)"
+              ></path>
+              <path
+                fill="url(#m)"
+                d="M313 143s6.64 84.82 57.49 100.07S464 204.72 468.32 143s-36-117.69-90.2-106.26S305.61 105.73 313 143Z"
+                transform="translate(-57.17)"
+              ></path>
+              <path
+                fill="#3f3d56"
+                d="M434.02 100.44c1.19 4.42 0 9.1-1.44 13.44a125 125 0 0 1-23.82 42.19c.28-1.7.52-3.42.71-5.13a111.57 111.57 0 0 0-2.79-40.61c-7.66-3.33-15.76 6-24 4.55-7.34-1.25-10.71-10-17.2-13.69s-15-1.29-21.41 2.61-12.13 9.23-19.17 11.92c-16.12 6.13-33.62-3.14-48.36-12.1l-2.85 10.07h-.86l-1.75.07a15.27 15.27 0 0 0-13.92 10.62c-3.23 10-1.36 18.54.25 30.72.12.9.77 5 1.07 5.88-10-16.38-20.27-39-16-57.66a88.46 88.46 0 0 0 2-9c.51-4.25-.2-8.54-.45-12.81-.61-10.32 1.86-21.39 9.27-28.61 17.59-17.1 32-40.45 55.25-48.29a91.14 91.14 0 0 1 71.32 6c11 5.9 20.59 14 30.12 22C417.25 38.76 424.58 45 429.63 53s7.59 18.11 4.37 27c-1.3 3.6-3.53 7.08-3.27 10.89.23 3.33 2.4 6.27 3.29 9.55Z"
+              ></path>
+              <path
+                fill="#fff"
+                d="M419.6 131.33c-2.91 6.73-5.95 13.64-10.13 19.61a111.57 111.57 0 0 0-2.79-40.61c-7.66-3.33-15.76 6-24 4.55-7.34-1.25-10.71-10-17.2-13.69s-15-1.29-21.41 2.61-12.13 9.23-19.17 11.92c-16 6.09-33.39-3-48.06-11.92-.73-6.49 13.61-12.45 37.48-3.17 19.58 7.62 37-27.84 62.2-18.17 2.87 1.11 4.4 4.46 7.27 5.59 4 1.56 8.39.32 12.61-.28s9.28-.11 11.53 3.52c1.72 2.78 1.11 6.37 1.89 9.55s4.76 6.13 7.09 3.84a68.71 68.71 0 0 1 .81 15.16 13.91 13.91 0 0 1 5.55-4.26c.71 5.42-1.5 10.74-3.67 15.75ZM261.26 114.18c-5.94 12.44-6.32 33.53-2.76 46.83-2.65-6.48-7.94-19-9.5-25.87-1.34-5.83-2.11-12.5 1.42-17.34a17.27 17.27 0 0 0 2.43-3.48 14.29 14.29 0 0 0 .63-3.2c.55-3.53 3.1-7.32 6.67-7.14a8.63 8.63 0 0 1 4 1.58c2.15 1.37 8.32 4.93 8.71 8.16Z"
+                opacity=".24"
+              ></path>
+              <path
+                fill="url(#n)"
+                d="M555.94 494.3s-1 10.42-8.42 16a.91.91 0 0 1-.16.11 17.33 17.33 0 0 1-9.81 3.29H242.84a19.41 19.41 0 0 1-8.26-1.85 19.37 19.37 0 0 1-1.84-8.26v-97.17Z"
+                transform="translate(-57.17)"
+                style="isolation: isolate"
+              ></path>
+              <path
+                fill="#fff"
+                d="M205.83 511h-28l-1.85-26.75v-165.7a19.44 19.44 0 0 1 19.44-19.44h71.33s-74.92.26-78.37 16.89 0 183.6 0 183.6-3.47 8.8 17.45 11.4Z"
+                opacity=".24"
+              ></path>
+            </svg>
+          </div>
+          <div class="md:order-1">
+            <h3
+              class="text-3xl md:text-4xl lg:text-5xl font-semibold font-secondary"
+            >
+              Hello I'm Aman Chand
+            </h3>
+            <p class="starry my-3 lg:my-5 md:text-xl text-lg lg:text-2xl">
+              I'm a
+              <span class="magic">
+                <span class="magic-star">
+                  <svg viewBox="0 0 512 512">
+                    <path
+                      d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                    />
+                  </svg>
+                </span>
+                <span class="magic-star">
+                  <svg viewBox="0 0 512 512">
+                    <path
+                      d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                    />
+                  </svg>
+                </span>
+                <span class="magic-star">
+                  <svg viewBox="0 0 512 512">
+                    <path
+                      d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z"
+                    />
+                  </svg>
+                </span>
+                <span class="magic-text">front-end web developer.</span></span
+              >
+              I make amazing looking, responsive, fully functional web
+              applications.
+            </p>
+            <div class="md:text-xl text-lg flex items-center gap-4">
+              <a
+                class="border-[3px] px-3 py-1 border-[#FBEAEB] duration-500 active:scale-95"
+                href="/Aman-CV.pdf"
+                download
+              >
+                Download CV
+              </a>
+              <a
+                class="border-[3px] px-3 py-1 border-[#FBEAEB] duration-500 active:scale-95"
+                href="#projects"
+                >My Work</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="projects"
+        class="bg-[#ff7f50] text-[#ffeb90] px-5 md:px-16 lg:px-40 dark:bg-[#232323] dark:text-[#ff7f50] md:overflow-y-scroll"
+      >
+        <h2 class="font-bold text-5xl font-secondary">PROJECTS</h2>
+        <div class="py-10 grid lg:grid-cols-2 gap-8 lg:gap-10">
+          <div
+            class="bg-[#ff703c] px-4 py-4 rounded-sm shadow-md group hover:scale-105 duration-500 dark:bg-[#3d3d3d]"
+          >
+            <div class="grayscale group-hover:grayscale-0 duration-500">
+              <img src="/craftarium.png" alt="" />
+            </div>
+            <h2 class="font-secondary text-2xl mt-2">Craftarium</h2>
+            <p class="my-2">
+              Craftarium is an online code editor which allows you to preview
+              your web development process in real time.
+            </p>
+            <div class="flex items-center gap-3">
+              <a
+                href="https://github.com/Aman-in-GitHub/Craftarium-CodeEditor"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Code
+              </a>
+              <a
+                href="https://craftarium-by-aman.netlify.app/"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Visit
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-[#ff703c] px-4 py-4 rounded-sm shadow-md group hover:scale-105 duration-500 dark:bg-[#3d3d3d]"
+          >
+            <div class="grayscale group-hover:grayscale-0 duration-500">
+              <img src="/typing.png" alt="" />
+            </div>
+            <h2 class="font-secondary text-2xl mt-2">MakeATypo</h2>
+            <p class="my-2">
+              MakeATypo is an online typing speed testing app built using React
+              that helps you improve your typing speed and accuracy.
+            </p>
+            <div class="flex items-center gap-3">
+              <a
+                href="https://github.com/Aman-in-GitHub/MakeATypo-TypingSpeedTest"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Code
+              </a>
+              <a
+                href="https://makeatypo-by-aman.netlify.app/"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Visit
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-[#ff703c] px-4 py-4 rounded-sm shadow-md group hover:scale-105 duration-500 dark:bg-[#3d3d3d]"
+          >
+            <div class="grayscale group-hover:grayscale-0 duration-500">
+              <img src="/etch.png" alt="" />
+            </div>
+            <h2 class="font-secondary text-2xl mt-2">Etch Symphony</h2>
+            <p class="my-2">
+              Etch Symphony is an online drawing tool where you can showcase
+              your pixel art and save it to share it with your friends.
+            </p>
+            <div class="flex items-center gap-3">
+              <a
+                href="https://github.com/Aman-in-GitHub/EtchSymphony-OnlineSketchTool"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Code
+              </a>
+              <a
+                href="https://etch-symphony-by-aman.netlify.app/"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Visit
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#ff703c] px-4 py-4 rounded-sm shadow-md group hover:scale-105 duration-500 dark:bg-[#3d3d3d]"
+          >
+            <div class="grayscale group-hover:grayscale-0 duration-500">
+              <img src="/momoman.png" alt="" />
+            </div>
+            <h2 class="font-secondary text-2xl mt-2">Momoman</h2>
+            <p class="my-2">
+              Momoman is a food ordering website where you can order food of
+              your choice on the go.
+            </p>
+            <div class="flex items-center gap-3">
+              <a
+                href="https://github.com/Aman-in-GitHub/Momoman"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Code
+              </a>
+              <a
+                href="https://momoman-by-aman.netlify.app/"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Visit
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-[#ff703c] px-4 py-4 rounded-sm shadow-md group hover:scale-105 duration-500 dark:bg-[#3d3d3d] lg:col-span-2"
+          >
+            <div
+              class="grayscale group-hover:grayscale-0 duration-500 lg:w-[50%] mx-auto"
+            >
+              <img src="/collage.png" alt="" />
+            </div>
+            <h2 class="font-secondary text-2xl mt-2">Website Clones</h2>
+            <p class="my-2">
+              I have made clones of many popular websites like Tesla, SpaceX,
+              Starbucks, Microsoft etc. You can check out all of them by
+              visiting my github repository. You can try out my other cool
+              projects too.
+            </p>
+            <div class="flex items-center gap-3">
+              <a
+                href="https://github.com/Aman-in-GitHub/Website-Clones"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Code
+              </a>
+              <a
+                href="https://spacexclone-by-aman.netlify.app/"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Visit
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="aboutMe"
+        class="bg-[#9457eb] text-[#CCF381] px-5 md:px-16 lg:px-40 dark:bg-[#232323] dark:text-[#9457eb]"
+      >
+        <div>
+          <h2 class="font-bold text-5xl font-secondary">ABOUT ME</h2>
+          <div class="text-lg my-5 md:text-xl lg:text-2xl text-justify">
+            <p>
+              My name is Aman Chand. I am currently pursuing my bachelor's
+              degree in Information Technology at Tribhuvan University.
+            </p>
+            <p class="mt-2 md:mt-4">
+              I'm a front-end developer with all the skills required for
+              creating visually appealing, functional, user-friendly websites. I
+              thrive in collaborative environments, working closely with teams
+              to deliver high-quality projects on time.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <h2 class="font-bold text-3xl md:text-4xl font-secondary">
+            MY SKILLS
+          </h2>
+          <div
+            class="text-lg my-5 grid grid-cols-3 gap-6 md:gap-16 mt-8 md:mt-12"
+          >
+            <div>
+              <img
+                src="/html-5.png"
+                class="w-[64px] md:w-[100px] mx-auto"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/css-3.png"
+                class="w-[64px] md:w-[100px] mx-auto"
+                alt=""
+              />
+            </div>
+            <div>
+              <img src="/js.png" class="w-[64px] md:w-[100px] mx-auto" alt="" />
+            </div>
+            <div>
+              <img
+                src="/tailwind.png"
+                class="w-[64px] md:w-[100px] mx-auto"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/react.png"
+                class="w-[64px] md:w-[100px] mx-auto"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/next.png"
+                class="w-[64px] md:w-[100px] mx-auto"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="contact"
+        class="bg-[#dc143c] text-[#FCF6F5] px-5 md:px-16 lg:px-40 dark:bg-[#232323] dark:text-[#dc143c] flex flex-col justify-between"
+      >
+        <h2
+          class="font-bold text-5xl font-secondary bg-[#dc143c] dark:bg-[#232323]"
+        >
+          CONTACT
+        </h2>
+
+        <div class="flex flex-col md:flex-row items-center text-[#dc143c]">
+          <form
+            name="Contact Form"
+            data-netlify="true"
+            action="/received"
+            method="POST"
+            class="w-full md:w-2/3"
+          >
+            <div>
+              <div class="flex flex-col mb-3">
+                <label
+                  for="name"
+                  class="text-[#FCF6F5] dark:text-[#dc143c] font-bold mb-1 text-lg"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  name="Name"
+                  id="name"
+                  class="px-3 py-2 outline-none dark:bg-[#3d3d3d]"
+                  required
+                />
+              </div>
+              <div class="flex flex-col mb-3">
+                <label
+                  for="email"
+                  class="text-[#FCF6F5] dark:text-[#dc143c] font-bold mb-1 text-lg"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="Email"
+                  class="px-3 py-2 outline-none dark:bg-[#3d3d3d]"
+                  required
+                />
+              </div>
+              <div class="flex flex-col">
+                <label
+                  for="message"
+                  class="text-[#FCF6F5] dark:text-[#dc143c] font-bold mb-1 text-lg"
+                  >Message</label
+                >
+                <textarea
+                  rows="6"
+                  id="message"
+                  name="Message"
+                  class="px-3 py-2 outline-none resize-none dark:bg-[#3d3d3d]"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <div class="w-full">
+              <button
+                type="submit"
+                class="w-full bg-[#FCF6F5] dark:bg-[#3d3d3d] mt-5 text-xl py-2 font-bold dark:hover:bg-[#dc143c] duration-300 active:scale-95 dark:hover:text-[#FCF6F5]"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+        <footer class="pb-2 bg-[#dc143c] dark:bg-[#232323]">
+          <div class="flex items-center justify-between">
+            <div>
+              <a href="#home">
+                <img src="/logo.png" alt="" class="w-[50px]" />
+              </a>
+            </div>
+            <p class="md:text-xl text-sm font-bold flex-auto text-center">
+              Copyright &copy; Aman 2023 ~ Present
+            </p>
+            <div class="hidden lg:flex items-center gap-10">
+              <a
+                href="https://github.com/Aman-in-GitHub"
+                class="duration-300 hover:scale-105"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="35"
+                  height="35"
+                  fill="white"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/amanchandinc"
+                class="duration-300 hover:scale-105"
+                target="_blank"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="35"
+                  height="35"
+                  fill="white"
+                  class="bi bi-linkedin"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
