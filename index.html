@@ -21,7 +21,7 @@
       <nav
         class="font-secondary flex justify-between items-center relative px-5 shadow-md dark:shadow-[#333333] py-2 md:px-16 lg:px-40"
       >
-        <div class="logo w-12">
+        <div class="w-12 logo">
           <a href="">
             <img src="/logo.png" alt="" />
           </a>
@@ -30,13 +30,13 @@
           <ul
             class="flex flex-col gap-20 fixed top-[0%] h-screen justify-center right-0 w-full items-center text-4xl font-black menu select-none translate-x-[200%] duration-500 lg:flex-row lg:translate-x-0 lg:h-auto lg:static lg:text-2xl lg:bg-transparent lg:gap-12 dark:bg-[#3d3d3d] text-white lg:dark:bg-transparent bg-[#4ca5ff]"
           >
-            <a href="#projects" class="hover:scale-105 duration-500"
+            <a href="#projects" class="duration-500 hover:scale-105"
               >Projects</a
             >
-            <a href="#aboutMe" class="hover:scale-105 duration-500">About Me</a>
-            <a href="#contact" class="hover:scale-105 duration-500">Contact</a>
-            <div class="toggle cursor-pointer hidden lg:block">
-              <div class="light hidden" title="Light Mode">
+            <a href="#aboutMe" class="duration-500 hover:scale-105">About Me</a>
+            <a href="#contact" class="duration-500 hover:scale-105">Contact</a>
+            <div class="hidden cursor-pointer toggle lg:block">
+              <div class="hidden light" title="Light Mode">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
@@ -51,7 +51,7 @@
                 </svg>
               </div>
 
-              <div class="dark hidden" title="Dark Mode">
+              <div class="hidden dark" title="Dark Mode">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
@@ -127,8 +127,8 @@
           </ul>
         </div>
         <div class="flex items-center gap-4 md:gap-8 lg:hidden">
-          <div class="toggle cursor-pointer">
-            <div class="light hidden" title="Light Mode">
+          <div class="cursor-pointer toggle">
+            <div class="hidden light" title="Light Mode">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -143,7 +143,7 @@
               </svg>
             </div>
 
-            <div class="dark hidden" title="Dark Mode">
+            <div class="hidden dark" title="Dark Mode">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -187,7 +187,7 @@
         id="home"
       >
         <div
-          class="flex justify-center items-center h-full flex-col md:flex-row mt-20 md:mt-0"
+          class="flex flex-col items-center justify-center h-full mt-20 md:flex-row md:mt-0"
         >
           <div class="w-[15rem] md:w-[40rem] md:order-2 mb-8 md:mb-0">
             <svg
@@ -482,11 +482,11 @@
           </div>
           <div class="md:order-1">
             <h3
-              class="text-3xl md:text-4xl lg:text-5xl font-semibold font-secondary"
+              class="text-3xl font-semibold md:text-4xl lg:text-5xl font-secondary"
             >
               Hello I'm Aman Chand
             </h3>
-            <p class="starry my-3 lg:my-5 md:text-xl text-lg lg:text-2xl">
+            <p class="my-3 text-lg starry lg:my-5 md:text-xl lg:text-2xl">
               I'm a
               <span class="magic">
                 <span class="magic-star">
@@ -515,7 +515,7 @@
               I make amazing looking, responsive, fully functional web
               applications.
             </p>
-            <div class="md:text-xl text-lg flex items-center gap-4">
+            <div class="flex items-center gap-4 text-lg md:text-xl">
               <a
                 class="border-[3px] px-3 py-1 border-[#FBEAEB] duration-500 active:scale-95"
                 href="/Aman-CV.pdf"
@@ -537,15 +537,50 @@
         id="projects"
         class="bg-[#ff7f50] text-[#ffeb90] px-5 md:px-16 lg:px-40 dark:bg-[#232323] dark:text-[#ff7f50] md:overflow-y-scroll"
       >
-        <h2 class="font-bold text-5xl font-secondary">PROJECTS</h2>
-        <div class="py-10 grid lg:grid-cols-2 gap-8 lg:gap-10">
+        <h2 class="text-5xl font-bold font-secondary">PROJECTS</h2>
+        <div class="grid gap-8 py-10 lg:grid-cols-2 lg:gap-10">
+          <div
+            class="bg-[#ff703c] px-4 py-4 rounded-sm shadow-md group hover:scale-105 duration-500 dark:bg-[#3d3d3d] border-[#ffeb90] border-[3.5px] relative"
+          >
+            <div class="duration-500 grayscale group-hover:grayscale-0">
+              <img src="/rakshya.jpg" alt="" class="w-32 mx-auto" />
+            </div>
+            <span
+              class="absolute hidden text-2xl md:text-4xl md:block md:top-5 md:right-5"
+              >🏆</span
+            >
+            <h2 class="mt-2 text-2xl font-secondary">
+              Rakshya <span class="md:hidden">🏆</span>
+            </h2>
+            <p class="my-2">
+              Rakshya is an award winning react native application which
+              includes features like voice control, first aid and offline
+              location tracking.
+            </p>
+            <div class="flex items-center gap-3">
+              <a
+                href="https://github.com/Aman-in-GitHub/Rakshya-AwardWinningHealthApp"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Code
+              </a>
+              <a
+                href="https://github.com/Aman-in-GitHub/Rakshya-AwardWinningHealthApp/releases"
+                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
+                target="_blank"
+              >
+                Try
+              </a>
+            </div>
+          </div>
           <div
             class="bg-[#ff703c] px-4 py-4 rounded-sm shadow-md group hover:scale-105 duration-500 dark:bg-[#3d3d3d]"
           >
-            <div class="grayscale group-hover:grayscale-0 duration-500">
+            <div class="duration-500 grayscale group-hover:grayscale-0">
               <img src="/craftarium.png" alt="" />
             </div>
-            <h2 class="font-secondary text-2xl mt-2">Craftarium</h2>
+            <h2 class="mt-2 text-2xl font-secondary">Craftarium</h2>
             <p class="my-2">
               Craftarium is an online code editor which allows you to preview
               your web development process in real time.
@@ -570,10 +605,10 @@
           <div
             class="bg-[#ff703c] px-4 py-4 rounded-sm shadow-md group hover:scale-105 duration-500 dark:bg-[#3d3d3d]"
           >
-            <div class="grayscale group-hover:grayscale-0 duration-500">
+            <div class="duration-500 grayscale group-hover:grayscale-0">
               <img src="/typing.png" alt="" />
             </div>
-            <h2 class="font-secondary text-2xl mt-2">MakeATypo</h2>
+            <h2 class="mt-2 text-2xl font-secondary">MakeATypo</h2>
             <p class="my-2">
               MakeATypo is an online typing speed testing app built using React
               that helps you improve your typing speed and accuracy.
@@ -598,10 +633,10 @@
           <div
             class="bg-[#ff703c] px-4 py-4 rounded-sm shadow-md group hover:scale-105 duration-500 dark:bg-[#3d3d3d]"
           >
-            <div class="grayscale group-hover:grayscale-0 duration-500">
+            <div class="duration-500 grayscale group-hover:grayscale-0">
               <img src="/etch.png" alt="" />
             </div>
-            <h2 class="font-secondary text-2xl mt-2">Etch Symphony</h2>
+            <h2 class="mt-2 text-2xl font-secondary">Etch Symphony</h2>
             <p class="my-2">
               Etch Symphony is an online drawing tool where you can showcase
               your pixel art and save it to share it with your friends.
@@ -625,34 +660,6 @@
           </div>
 
           <div
-            class="bg-[#ff703c] px-4 py-4 rounded-sm shadow-md group hover:scale-105 duration-500 dark:bg-[#3d3d3d]"
-          >
-            <div class="grayscale group-hover:grayscale-0 duration-500">
-              <img src="/momoman.png" alt="" />
-            </div>
-            <h2 class="font-secondary text-2xl mt-2">Momoman</h2>
-            <p class="my-2">
-              Momoman is a food ordering website where you can order food of
-              your choice on the go.
-            </p>
-            <div class="flex items-center gap-3">
-              <a
-                href="https://github.com/Aman-in-GitHub/Momoman"
-                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
-                target="_blank"
-              >
-                Code
-              </a>
-              <a
-                href="https://momoman-by-aman.netlify.app/"
-                class="border-[2px] px-3 py-1 border-[#ffeb90] duration-500 active:scale-95 dark:border-[#ff7f50]"
-                target="_blank"
-              >
-                Visit
-              </a>
-            </div>
-          </div>
-          <div
             class="bg-[#ff703c] px-4 py-4 rounded-sm shadow-md group hover:scale-105 duration-500 dark:bg-[#3d3d3d] lg:col-span-2"
           >
             <div
@@ -660,7 +667,7 @@
             >
               <img src="/collage.png" alt="" />
             </div>
-            <h2 class="font-secondary text-2xl mt-2">Website Clones</h2>
+            <h2 class="mt-2 text-2xl font-secondary">Website Clones</h2>
             <p class="my-2">
               I have made clones of many popular websites like Tesla, SpaceX,
               Starbucks, Microsoft etc. You can check out all of them by
@@ -691,8 +698,8 @@
         class="bg-[#9457eb] text-[#CCF381] px-5 md:px-16 lg:px-40 dark:bg-[#232323] dark:text-[#9457eb]"
       >
         <div>
-          <h2 class="font-bold text-5xl font-secondary">ABOUT ME</h2>
-          <div class="text-lg my-5 md:text-xl lg:text-2xl text-justify">
+          <h2 class="text-5xl font-bold font-secondary">ABOUT ME</h2>
+          <div class="my-5 text-lg text-justify md:text-xl lg:text-2xl">
             <p>
               My name is Aman Chand. I am currently pursuing my bachelor's
               degree in Information Technology at Tribhuvan University.
@@ -706,11 +713,11 @@
           </div>
         </div>
         <div class="text-center">
-          <h2 class="font-bold text-3xl md:text-4xl font-secondary">
+          <h2 class="text-3xl font-bold md:text-4xl font-secondary">
             MY SKILLS
           </h2>
           <div
-            class="text-lg my-5 grid grid-cols-3 gap-6 md:gap-16 mt-8 md:mt-12"
+            class="grid grid-cols-3 gap-6 my-5 mt-8 text-lg md:gap-16 md:mt-12"
           >
             <div>
               <img
@@ -832,10 +839,10 @@
                 <img src="/logo.png" alt="" class="w-[50px]" />
               </a>
             </div>
-            <p class="md:text-xl text-sm font-bold flex-auto text-center">
+            <p class="flex-auto text-sm font-bold text-center md:text-xl">
               Copyright &copy; Aman 2023 ~ Present
             </p>
-            <div class="hidden lg:flex items-center gap-10">
+            <div class="items-center hidden gap-10 lg:flex">
               <a
                 href="https://github.com/Aman-in-GitHub"
                 class="duration-300 hover:scale-105"
